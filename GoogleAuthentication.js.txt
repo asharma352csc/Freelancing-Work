@@ -1,0 +1,21 @@
+
+function getAccessToken() {
+    if (location.hash) {
+        if (location.hash.split('access_token=')) {
+            var accessToken = location.hash.split('access_token=')[1].split('&')[0];
+            if (accessToken) {
+                $.ajax({
+                        URL: 'https://jsonplaceholder.typicode.com/todos/1',
+                        type: 'POST',
+                        dataType: 'json',
+                        contentType: 'application/json; charset=utf-8',
+                        data: JSON.stringify(),
+                        success: function (data) {
+                        alert("Web API Google Authenticated Successfully");
+                    }
+                })                
+            }
+        }
+    }
+}
+
