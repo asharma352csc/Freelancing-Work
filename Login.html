@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Login with Google</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script>
+
+        $(document).ready(function () {
+            $('#btnGoogleLogin').click(function () {
+                window.location.href = "https://accounts.google.com/o/oauth2/v2/auth?scope=openid&redirect_uri=http://localhost:49991/api/Default/1&response_type=code&client_id=184994783224-p1u93khn7tkqi1t9ittjkkutt2jubvds.apps.googleusercontent.com";
+            });
+        });
+
+    </script>
+</head>
+<body style="padding-top:20px">
+
+    <div class="col-md-10 col-md-offset-1">
+
+        <div class="well">
+
+            <table class="table table-bordered">
+
+                <thead>
+
+                    <tr class="success">
+
+                        <th>
+
+                            Social Logins
+
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    
+                    <tr>
+
+                        <td>
+
+                            <input type="button" id="btnGoogleLogin"
+                                   value="Login with Google" class="btn btn-success" />
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
